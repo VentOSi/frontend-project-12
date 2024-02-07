@@ -46,26 +46,26 @@ const RemoveChannel = () => {
   return (
     <Modal show centered>
       <Modal.Header closeButton onClick={onHide}>
-        <Modal.Title className='modal-title h4'>
+        <Modal.Title className="modal-title h4">
           {t('modals.deleteChannel')}
         </Modal.Title>
       </Modal.Header>
       <Form onSubmit={handleSubmit}>
         <Modal.Body>
-          <p className='lead'>{t('modals.sure')}</p>
+          <p className="lead">{t('modals.sure')}</p>
         </Modal.Body>
-        <FormGroup className='d-flex justify-content-end m-3'>
+        <FormGroup className="d-flex justify-content-end m-3">
           <Button
-            className='me-2 btn-secondary'
-            variant='secondary'
+            className="me-2 btn-secondary"
+            variant="secondary"
             onClick={() => onHide()}
           >
             {t('modals.cancel')}
           </Button>
           <Button
-            className='btn-primary'
-            type='submit'
-            variant='danger'
+            className="btn-primary"
+            type="submit"
+            variant="danger"
             ref={inputRef}
             disabled={isSubmitting}
           >

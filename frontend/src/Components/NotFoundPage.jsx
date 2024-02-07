@@ -8,14 +8,14 @@ const NotFound = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='text-center'>
+    <div className="text-center">
       <img
         src={avatar3}
-        className='img-fluid h-25'
+        className="img-fluid h-25"
         alt={t('notFound.notFound')}
       />
-      <h1 className='h4 text-muted'>{t('notFound.notFound')}</h1>
-      <p className='text-muted'>
+      <h1 className="h4 text-muted">{t('notFound.notFound')}</h1>
+      <p className="text-muted">
         {t('notFound.redirectTextBegin')}
         <Link to={routes.chatPagePath()}>{t('notFound.redirectTextEnd')}</Link>
       </p>

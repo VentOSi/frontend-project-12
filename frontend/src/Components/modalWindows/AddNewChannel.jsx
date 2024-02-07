@@ -77,7 +77,7 @@ const AddNewChannel = () => {
   };
 
   return (
-    <Modal show centered onShow={showModal} className='modal-form'>
+    <Modal show centered onShow={showModal} className="modal-form">
       <Modal.Header closeButton onHide={onHide}>
         <Modal.Title>{t('modals.addChannel')}</Modal.Title>
       </Modal.Header>
@@ -86,32 +86,32 @@ const AddNewChannel = () => {
           <Modal.Footer>
             <Form.Control
               ref={inputRef}
-              name='channelName'
-              id='channelName'
+              name="channelName"
+              id="channelName"
               placeholder={t('modals.text')}
               className={classError}
               value={values.channelName}
               onChange={handleChange}
             />
-            <Form.Label className='visually-hidden' htmlFor='channelName'>
+            <Form.Label className="visually-hidden" htmlFor="channelName">
               {t('modals.channelName')}
             </Form.Label>
-            <div className='invalid-feedback'>{errors.channelName}</div>
+            <div className="invalid-feedback">{errors.channelName}</div>
           </Modal.Footer>
         </Form.Group>
-        <FormGroup className='d-flex justify-content-end m-3'>
+        <FormGroup className="d-flex justify-content-end m-3">
           <Button
-            variant='secondary'
-            type='button'
-            className='me-2'
+            variant="secondary"
+            type="button"
+            className="me-2"
             onClick={() => onHide()}
           >
             {t('modals.cancel')}
           </Button>
           <Button
-            className='btn-primary'
-            type='submit'
-            variant='primary'
+            className="btn-primary"
+            type="submit"
+            variant="primary"
             disabled={isSubmitting}
           >
             {t('modals.send')}

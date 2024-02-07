@@ -84,69 +84,69 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className='container-fluid h-100'>
-        <div className='row justify-content-center align-content-center h-100'>
-          <div className='col-12 col-md-8 col-xxl-6'>
-            <div className='card shadow-sm'>
-              <div className='card-body row p-5'>
-                <div className='col-12 col-md-6 d-flex align-items-center justify-content-center'>
+      <div className="container-fluid h-100">
+        <div className="row justify-content-center align-content-center h-100">
+          <div className="col-12 col-md-8 col-xxl-6">
+            <div className="card shadow-sm">
+              <div className="card-body row p-5">
+                <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
                   <img
                     src={avatar1}
-                    className='rounded-circle'
+                    className="rounded-circle"
                     alt={t('login.loginHeader')}
                   />
                 </div>
                 <Form
-                  className='col-12 col-md-6 mt-3 mt-mb-0'
+                  className="col-12 col-md-6 mt-3 mt-mb-0"
                   onSubmit={handleSubmit}
                 >
-                  <h1 className='text-center mb-4'>{t('login.loginHeader')}</h1>
-                  <Form.Group className='form-floating mb-3'>
+                  <h1 className="text-center mb-4">{t('login.loginHeader')}</h1>
+                  <Form.Group className="form-floating mb-3">
                     <Form.Control
                       ref={inputRef}
-                      name='username'
-                      autoComplete='username'
+                      name="username"
+                      autoComplete="username"
                       required=''
                       placeholder={t('login.yourNickname')}
-                      id='username'
+                      id="username"
                       className={errorClass}
                       value={values.username}
                       onChange={handleChange}
                     />
-                    <Form.Label htmlFor='username'>
+                    <Form.Label htmlFor="username">
                       {t('login.yourNickname')}
                     </Form.Label>
                   </Form.Group>
-                  <Form.Group className='form-floating mb-4'>
+                  <Form.Group className="form-floating mb-4">
                     <Form.Control
-                      name='password'
-                      autoComplete='current-password'
+                      name="password"
+                      autoComplete="current-password"
                       required=''
                       placeholder={t('login.password')}
-                      type='password'
-                      id='password'
+                      type="password"
+                      id="password"
                       className={errorClass}
                       value={values.password}
                       onChange={handleChange}
                     />
-                    <Form.Label className='form-label' htmlFor='password'>
+                    <Form.Label className="form-label" htmlFor="password">
                       {t('login.password')}
                     </Form.Label>
-                    <Form.Control.Feedback type='invalid'>
+                    <Form.Control.Feedback type="invalid">
                       {t('login.submissionFailed')}
                     </Form.Control.Feedback>
                   </Form.Group>
                   <Button
                     disabled={isSubmitting}
-                    type='submit'
-                    className='w-100 mb-3 btn btn-primary'
+                    type="submit"
+                    className="w-100 mb-3 btn btn-primary"
                   >
                     {t('login.loginHeader')}
                   </Button>
                 </Form>
               </div>
-              <div className='card-footer p-4'>
-                <div className='text-center'>
+              <div className="card-footer p-4">
+                <div className="text-center">
                   <span>{t('login.noAccount')}</span>
                   <Link to={routes.signupPagePath()}>
                     {t('login.registration')}
@@ -157,7 +157,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-      <div className='Toastify' />
+      <div className="Toastify" />
     </>
   );
 };

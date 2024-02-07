@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
       setToken(data);
       navigate(routes.chatPagePath());
     },
-    [navigate]
+    [navigate,]
   );
 
   const logOut = useCallback(() => {
@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
       logOut,
       logIn,
     }),
-    [token, setToken, logOut, logIn]
+    [token, setToken, logOut, logIn,]
   );
 
   return (

@@ -10,15 +10,15 @@ const HeaderComponent = () => {
   const { t } = useTranslation();
   return (
     <>
-      <Navbar className='shadow-sm navbar navbar-expand-lg navbar-light bg-white'>
+      <Navbar className="shadow-sm navbar navbar-expand-lg navbar-light bg-white">
         <Container>
           <Navbar.Brand as={Link} to={routes.chatPagePath()}>
             {t('header.mainHeader')}
           </Navbar.Brand>
           {auth.token ? (
             <Button
-              type='button'
-              className='btn btn-primary'
+              type="button"
+              className="btn btn-primary"
               onClick={auth.logOut}
             >
               {t('header.goOut')}

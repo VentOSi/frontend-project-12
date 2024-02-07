@@ -11,9 +11,7 @@ const ChannelsManagement = ({ showModal }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const channels = useSelector((state) => state.channelsReducer.channels) || [];
-  const channelIdActive = useSelector(
-    (state) => state.channelsReducer.channelId
-  );
+  const channelIdActive = useSelector((state) => state.channelsReducer.channelId);
 
   const setChannelIdAction = (id) => {
     dispatch(channelsActions.setChannelId(id));
@@ -21,9 +19,9 @@ const ChannelsManagement = ({ showModal }) => {
   const render = channels.map((channel) => {
     const { name, id, removable } = channel;
     return !removable ? (
-      <li className='nav-item w-100' key={id}>
+      <li className="nav-item w-100" key={id}>
         <button
-          type='button'
+          type="button"
           className={
             id === channelIdActive
               ? 'w-100 rounded-0 text-start btn btn-secondary'
@@ -31,20 +29,20 @@ const ChannelsManagement = ({ showModal }) => {
           }
           onClick={() => setChannelIdAction(id)}
         >
-          <span className='me-1'>#</span>
+          <span className="me-1">#</span>
           {name}
         </button>
       </li>
     ) : (
-      <li className='nav-item w-100' key={id}>
-        <Dropdown as={ButtonGroup} className='d-flex'>
+      <li className="nav-item w-100" key={id}>
+        <Dropdown as={ButtonGroup} className="d-flex">
           <Button
             key={id}
             variant={id === channelIdActive ? 'secondary' : 'light'}
-            className='w-100 rounded-0 text-start text-truncate'
+            className="w-100 rounded-0 text-start text-truncate"
             onClick={() => setChannelIdAction(id)}
           >
-            <span className='me-1'>#</span>
+            <span className="me-1">#</span>
             {filterWords.clean(name)}
           </Button>
           <Dropdown.Toggle
@@ -54,7 +52,7 @@ const ChannelsManagement = ({ showModal }) => {
                 : 'flex-grow-0 dropdown-toggle dropdown-toggle-split btn'
             }
           >
-            <span className='visually-hidden'>
+            <span className="visually-hidden">
               {t('channels.channelManagement')}
             </span>
           </Dropdown.Toggle>

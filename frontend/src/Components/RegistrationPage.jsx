@@ -78,29 +78,29 @@ const RegistrationPage = () => {
 
   return (
     <>
-      <div className='container-fluid h-100'>
-        <div className='row justify-content-center align-content-center h-100'>
-          <div className='col-12 col-md-8 col-xxl-6'>
-            <div className='card shadow-sm'>
-              <div className='card-body d-flex flex-column flex-md-row justify-content-around align-items-center p-5'>
+      <div className="container-fluid h-100">
+        <div className="row justify-content-center align-content-center h-100">
+          <div className="col-12 col-md-8 col-xxl-6">
+            <div className="card shadow-sm">
+              <div className="card-body d-flex flex-column flex-md-row justify-content-around align-items-center p-5">
                 <div>
                   <img
                     src={avatar2}
-                    className='rounded-circle'
+                    className="rounded-circle"
                     alt={t('signup.registration')}
                   />
                 </div>
-                <Form className='w-50' onSubmit={handleSubmit}>
-                  <h1 className='text-center mb-4'>
+                <Form className="w-50" onSubmit={handleSubmit}>
+                  <h1 className="text-center mb-4">
                     {t('signup.registration')}
                   </h1>
-                  <Form.Group className='form-floating mb-3'>
+                  <Form.Group className="form-floating mb-3">
                     <Form.Control
                       placeholder={t('signup.userName')}
-                      name='username'
-                      autoComplete='username'
+                      name="username"
+                      autoComplete="username"
                       required=''
-                      id='username'
+                      id="username"
                       className={
                         errors.username && touched.username
                           ? 'form-control is-invalid'
@@ -111,20 +111,20 @@ const RegistrationPage = () => {
                       onBlur={handleBlur}
                       ref={usernameRef}
                     />
-                    <div className='invalid-tooltip'>{errors.username}</div>
-                    <Form.Label className='form-label' htmlFor='username'>
+                    <div className="invalid-tooltip">{errors.username}</div>
+                    <Form.Label className="form-label" htmlFor="username">
                       {t('signup.userName')}
                     </Form.Label>
                   </Form.Group>
-                  <Form.Group className='form-floating mb-3'>
+                  <Form.Group className="form-floating mb-3">
                     <Form.Control
                       placeholder={t('signup.password')}
-                      name='password'
-                      aria-describedby='passwordHelpBlock'
+                      name="password"
+                      aria-describedby="passwordHelpBlock"
                       required=''
-                      autoComplete='new-password'
-                      type='password'
-                      id='password'
+                      autoComplete="new-password"
+                      type="password"
+                      id="password"
                       className={
                         errors.password && touched.password
                           ? 'form-control is-invalid'
@@ -134,19 +134,19 @@ const RegistrationPage = () => {
                       value={values.password}
                       onBlur={handleBlur}
                     />
-                    <div className='invalid-tooltip'>{errors.password}</div>
-                    <Form.Label className='form-label' htmlFor='password'>
+                    <div className="invalid-tooltip">{errors.password}</div>
+                    <Form.Label className="form-label" htmlFor="password">
                       {t('signup.password')}
                     </Form.Label>
                   </Form.Group>
-                  <Form.Group className='form-floating mb-4'>
+                  <Form.Group className="form-floating mb-4">
                     <Form.Control
                       placeholder={t('signup.confirmPassword')}
-                      name='confirmPassword'
-                      autoComplete='new-password'
+                      name="confirmPassword"
+                      autoComplete="new-password"
                       required=''
-                      type='password'
-                      id='confirmPassword'
+                      type="password"
+                      id="confirmPassword"
                       className={
                         errors.confirmPassword && touched.confirmPassword
                           ? 'form-control is-invalid'
@@ -157,20 +157,20 @@ const RegistrationPage = () => {
                       onBlur={handleBlur}
                       disabled={isSubmitting}
                     />
-                    <div className='invalid-tooltip'>
+                    <div className="invalid-tooltip">
                       {errors.confirmPassword}
                     </div>
                     <Form.Label
-                      className='form-label'
-                      htmlFor='confirmPassword'
+                      className="form-label"
+                      htmlFor="confirmPassword"
                     >
                       {t('signup.confirmPassword')}
                     </Form.Label>
                   </Form.Group>
                   <Button
-                    type='submit'
+                    type="submit"
                     disabled={isSubmitting}
-                    className='w-100 mb-3 btn btn-outline-primary btn-light'
+                    className="w-100 mb-3 btn btn-outline-primary btn-light"
                   >
                     {t('signup.register')}
                   </Button>
@@ -180,7 +180,7 @@ const RegistrationPage = () => {
           </div>
         </div>
       </div>
-      <div className='Toastify' />
+      <div className="Toastify" />
     </>
   );
 };
