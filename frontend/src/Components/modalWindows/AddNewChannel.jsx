@@ -82,7 +82,7 @@ const AddNewChannel = () => {
         <Modal.Title>{t('modals.addChannel')}</Modal.Title>
       </Modal.Header>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className='mb-3'>
+        <Form.Group className="mb-3">
           <Modal.Footer>
             <Form.Control
               ref={inputRef}

@@ -106,7 +106,7 @@ const LoginPage = () => {
                       ref={inputRef}
                       name="username"
                       autoComplete="username"
-                      required=''
+                      required=""
                       placeholder={t('login.yourNickname')}
                       id="username"
                       className={errorClass}
@@ -121,7 +121,7 @@ const LoginPage = () => {
                     <Form.Control
                       name="password"
                       autoComplete="current-password"
-                      required=''
+                      required=""
                       placeholder={t('login.password')}
                       type="password"
                       id="password"

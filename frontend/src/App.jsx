@@ -19,7 +19,7 @@ const RoutePrivate = ({ children }) => {
 
 const App = () => (
   <Provider store={store}>
-    <div className='d-flex flex-column h-100'>
+    <div className="d-flex flex-column h-100">
       <HeaderComponent />
       <Routes>
         <Route
@@ -32,7 +32,7 @@ const App = () => (
         />
         <Route path={routes.loginPagePath()} element={<LoginPage />} />
         <Route path={routes.signupPagePath()} element={<RegistrationPage />} />
-        <Route path='*' element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <ModalComponent />
     </div>

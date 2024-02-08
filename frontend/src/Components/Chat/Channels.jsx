@@ -11,7 +11,7 @@ const Channels = () => {
   // eslint-disable-next-line max-len
   const showModal = (type, targetId = null) => dispatch(modalsActions.openModal({ type, targetId }));
 
-  const channels = useSelector((state) => state.channelsReducer.channels) || [];
+  const channels = useSelector((state) => state.channelsReducer.channels || []);
   const currentChannelId = useSelector((state) => state.channelsReducer.channelId);
   const channelRef = useRef(null);
 
@@ -19,12 +19,12 @@ const Channels = () => {
     if (currentChannelId !== defaultChannelId) {
       channelRef.current.scrollTo(
         currentChannelId,
-        channelRef.current.scrollHeight
+        channelRef.current.scrollHeight,
       );
     } else {
       channelRef.current.scrollTo(0, 0);
     }
-  }, [channels, currentChannelId,]);
+  }, [channels, currentChannelId]);
 
   return (
     <div className="col-4 col-md-2 border-end px-0 bg-light flex-column h-100 d-flex">

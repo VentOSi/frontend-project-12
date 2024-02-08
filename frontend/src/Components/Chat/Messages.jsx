@@ -62,8 +62,9 @@ const Messages = () => {
         <div className="bg-light mb-4 p-3 shadow-sm small">
           <p className="m-0">
             <b>
-              # 
-              {activeChannelId(channels)} </b>
+              #
+              {activeChannelId(channels)} 
+            </b>
           </p>
           <span className="text-muted">
             {`${channelMessage.length} ${t('chat.messagesCounter.messages', {

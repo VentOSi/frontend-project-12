@@ -99,7 +99,7 @@ const RegistrationPage = () => {
                       placeholder={t('signup.userName')}
                       name="username"
                       autoComplete="username"
-                      required=''
+                      required=""
                       id="username"
                       className={
                         errors.username && touched.username
@@ -121,7 +121,7 @@ const RegistrationPage = () => {
                       placeholder={t('signup.password')}
                       name="password"
                       aria-describedby="passwordHelpBlock"
-                      required=''
+                      required=""
                       autoComplete="new-password"
                       type="password"
                       id="password"
@@ -144,7 +144,7 @@ const RegistrationPage = () => {
                       placeholder={t('signup.confirmPassword')}
                       name="confirmPassword"
                       autoComplete="new-password"
-                      required=''
+                      required=""
                       type="password"
                       id="confirmPassword"
                       className={
