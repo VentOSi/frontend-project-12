@@ -63,7 +63,7 @@ const Messages = () => {
           <p className="m-0">
             <b>
               #
-              {activeChannelId(channels)} 
+              {activeChannelId(channels)}
             </b>
           </p>
           <span className="text-muted">
